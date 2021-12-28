@@ -52,7 +52,7 @@ export default function Allnews() {
                     return (
                         <div className='col-md-4 my-3' key={e.url}>
 
-                            <NewsCards title={e.title.slice(0, 110)} description={e.description ? e.description.slice(0, 100) : ""} newsUrl={e.url} imageUrl={e.urlToImage ? e.urlToImage : "https://img.freepik.com/free-vector/news-concept-landing-page_52683-20522.jpg?size=626&ext=jpg"} date={e.publishedAt} />
+                            <NewsCards title={e.title.slice(0, 110)} description={e.description ? e.description.slice(0, 100) : ""} newsUrl={e.url} imageUrl={e.urlToImage ? e.urlToImage : "https://img.freepik.com/free-vector/news-concept-landing-page_52683-20522.jpg?size=626&ext=jpg"} date={e.publishedAt}  author={e.author} source={e.source.name} />
                         </div>
                     );
                 })}
