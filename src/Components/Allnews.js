@@ -15,7 +15,7 @@ export default function Allnews() {
 
     const fetchApi = async () => {
 
-        let apiUrl = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=6c0b2660434447f0b0a3f2cfcbf768ee&page=1&pageSize=18";
+        let apiUrl = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=6c0b2660434447f0b0a3f2cfcbf768ee&page=1&pageSize=18";
         let data = await fetch(apiUrl);
         let fetchedData = await data.json();
         setArticle(fetchedData.articles);
@@ -23,7 +23,7 @@ export default function Allnews() {
     }
 
     const prevClick = async () => {
-        let apiUrl = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=6c0b2660434447f0b0a3f2cfcbf768ee&page=${pageNo - 1}&pageSize=18`;
+        let apiUrl = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=6c0b2660434447f0b0a3f2cfcbf768ee&page=${pageNo - 1}&pageSize=18`;
         let data = await fetch(apiUrl);
         let fetchedData = await data.json();
         setArticle(fetchedData.articles);
@@ -35,7 +35,7 @@ export default function Allnews() {
         //    Total cards per page taken as 18
         if (pageNo + 1 <= Math.ceil(totalResults / 18)) {
 
-            let apiUrl = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=6c0b2660434447f0b0a3f2cfcbf768ee&page=${pageNo + 1}&pageSize=18`;
+            let apiUrl = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=6c0b2660434447f0b0a3f2cfcbf768ee&page=${pageNo + 1}&pageSize=18`;
             let data = await fetch(apiUrl);
             let fetchedData = await data.json();
             setArticle(fetchedData.articles);
@@ -46,7 +46,7 @@ export default function Allnews() {
 
     return (
         <div className='container my-5'>
-            <h1> Top News-HeadLines from US </h1>
+            <h1> Top News HeadLines from INDIA </h1>
             <div className='row my-5 '>
                 {article.map(e => {
                     return (
